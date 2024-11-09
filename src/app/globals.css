@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .chip {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 9999px;
+    background-color: white;
+    color: black;
+    max-height: max-content;
+    padding: 0.25rem 0.75rem;
+    letter-spacing: -0.05em;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 300ms ease; /* Solo transición del color */
+    cursor: pointer;
+  }
+  .chip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transition: width 300ms ease;
+  }
+  .chip:hover::before {
+    width: 100%; /* Se expande de izquierda a derecha */
+  }
+  .chip:hover {
+    color: white; /* Cambia el texto cuando se hace hover */
+  }
+  .contact-btn {
+    position: relative;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+  }
+  .contact-btn:hover {
+    color: black;
+  }
+  .contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: width 300ms ease;
+    border-radius: 9999px;
+  }
+  .contact-btn:hover::before {
+    width: 100%;
+  }
+  footer {
+    /* background: #1b0738;
+    background: linear-gradient(315deg, #1b0738, #383736); */
+    /* background-image: linear-gradient(
+      to right,
+      #0e1c26,
+      #13232d,
+      #172b34,
+      #1d323b,
+      #223a42,
+      #243e47,
+      #25424b,
+      #274650,
+      #264754,
+      #254759,
+      #26485d,
+      #294861
+    ); */
+    /* background-image: linear-gradient(
+      to left,
+      #000328,
+      #000328,
+      #000328,
+      #000328,
+      #000328,
+      #020c2f,
+      #011237,
+      #02173f,
+      #042252,
+      #052d65,
+      #053979,
+      #00458e
+    ); */
+    background-color: black;
+  }
+}
