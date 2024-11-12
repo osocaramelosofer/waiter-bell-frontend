@@ -58,7 +58,6 @@ const tables: Table[] = [
 export default function AdminPage() {
   const [tablesState, setTablesState] = useState<Table[]>(tables)
   useEffect(() => {
-    console.log('use state')
     // Inicializa el socket solo una vez
     socket = io('ws://localhost:3000')
 
@@ -66,7 +65,9 @@ export default function AdminPage() {
     socket.on('user arrived', (msg: string) => {
       console.log('user arrived: ', msg)
       const tableData: Table = JSON.parse(msg)
-      toast(tableData.message, {
+      const { tableId } = tableData
+      const clientArrivedMsg = `Un cliente ha llegado a la mesa ${tableId}`
+      toast(clientArrivedMsg, {
         action: {
           label: 'Undo',
           onClick: () => console.log('X')
@@ -90,7 +91,7 @@ export default function AdminPage() {
   }, [])
 
   return (
-    <section className="bg-neutral-800 h-full py-20">
+    <section className="bg-neutral-800 h-screen py-20">
       <h1 className="text-center text-5xl uppercase font-bold mb-10 text-white">
         Mesas
       </h1>

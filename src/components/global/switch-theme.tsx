@@ -10,9 +10,6 @@ const SwitchTheme = () => {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    // <Button onPress={toggleTheme}>
-    //   {theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-    // </Button>
     <Switch
       onValueChange={toggleTheme}
       defaultSelected
@@ -26,7 +23,7 @@ const SwitchTheme = () => {
         )
       }
       classNames={{
-        wrapper: 'bg-foreground-50'
+        wrapper: 'bg-foreground-200'
       }}
     ></Switch>
   )

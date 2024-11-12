@@ -13,7 +13,7 @@ import { AnimatedCards } from './animated-cards'
 export function AccordionMenu() {
   return (
     <Accordion
-      className="flex w-full flex-col"
+      className="flex w-full flex-col "
       transition={{ type: 'spring', stiffness: 120, damping: 20 }}
       variants={{
         expanded: {
@@ -26,38 +26,38 @@ export function AccordionMenu() {
         }
       }}
     >
-      <AccordionItem value="getting-started" className="py-2">
-        <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50">
+      <AccordionItem value="getting-started" className="py-2 ">
+        <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50 ">
           <div className="flex items-center">
             <ChevronRight className="h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-[expanded]:rotate-90 dark:text-zinc-50" />
-            <div className="ml-2 text-zinc-950 dark:text-zinc-50 text-4xl front-bold">
-              Entradas
+            <div className="ml-2 text-zinc-950 dark:text-zinc-50 text-4xl font-bold">
+              Entradas 🍟
             </div>
           </div>
         </AccordionTrigger>
         <AccordionContent className="origin-left">
           <p className="pl-6 pr-2 text-zinc-500 dark:text-zinc-400">
-            Kick off your experience by setting up Motion-Primitives. This
-            section covers the basics of installation and how to add animations
-            to your projects. You’ll get familiar with the initial setup and the
-            core features quickly.
+            Tienes hambre y no sabes por donde empezar? Aqui te dejamos nuestras
+            mejores recomendaciones
           </p>
-          <div className="flex justify-center py-10">
-            <img
-              src="https://m.media-amazon.com/images/I/71skAxiMC2L._AC_UF1000,1000_QL80_.jpg"
-              alt="What I Talk About When I Talk About Running - book cover"
-              className="h-auto w-[200px]"
-            />
+
+          <div className="md:ml-5 flex gap-x-5 gap-y-7 flex-wrap mt-5 justify-center md:justify-start">
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
+            <MenuItem />
           </div>
-          <MenuItem />
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="animation-properties" className="py-2">
         <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50">
           <div className="flex items-center">
             <ChevronRight className="h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-[expanded]:rotate-90 dark:text-zinc-50" />
-            <div className="ml-2 text-zinc-950 dark:text-zinc-50">
-              Must order
+            <div className="ml-2 text-zinc-950 dark:text-zinc-50 text-4xl font-bold">
+              Platillos fuertes 🥩
             </div>
           </div>
         </AccordionTrigger>
@@ -74,8 +74,8 @@ export function AccordionMenu() {
         <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50">
           <div className="flex items-center">
             <ChevronRight className="h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-[expanded]:rotate-90 dark:text-zinc-50" />
-            <div className="ml-2 text-zinc-950 dark:text-zinc-50">
-              How do I use advanced features?
+            <div className="ml-2 text-zinc-950 dark:text-zinc-50 text-4xl font-bold">
+              Bebidas 🍹
             </div>
           </div>
         </AccordionTrigger>
@@ -92,8 +92,8 @@ export function AccordionMenu() {
         <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50">
           <div className="flex items-center">
             <ChevronRight className="h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-[expanded]:rotate-90 dark:text-zinc-50" />
-            <div className="ml-2 text-zinc-950 dark:text-zinc-50">
-              How do I engage with the community?
+            <div className="ml-2 text-zinc-950 dark:text-zinc-50 text-4xl font-bold">
+              Postres 🍧
             </div>
           </div>
         </AccordionTrigger>

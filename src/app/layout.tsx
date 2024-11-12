@@ -30,8 +30,8 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'ferleth textiles',
-  description: 'mexican fabric and textiles'
+  title: 'Holbox Restaurant',
+  description: 'Restaurant'
 }
 
 export default function RootLayout({

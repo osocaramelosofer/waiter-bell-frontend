@@ -4,18 +4,13 @@ import { AccordionMenu } from '@/components/menu/accordion-menu'
 
 export default function Home() {
   return (
-    <section className="grid bg-foreground-100 h-full w-full">
-      {/* <div className="bg-red-200 w-max mx-auto">
-        <p>select an option</p>
-        <div className="flex flex-col">
-          <a href="tables/1">Join a table</a>
-          <a href="admin">Admin panel</a>
-        </div>
-      </div> */}
-      <div className="justify-self-end mt-2 ">
+    <section className="flex flex-col h-screen w-full relative">
+      <div className="mt-2 h-max absolute top-2 right-2">
         <SwitchTheme />
       </div>
-      <AccordionMenu />
+      <div className="px-5 mt-10 md:px-20 md:mt-10">
+        <AccordionMenu />
+      </div>
     </section>
   )
 }

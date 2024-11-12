@@ -8,7 +8,7 @@ export default async function Page({
 }) {
   const slug = (await params).slug
   return (
-    <section className="bg-white w-full h-full grid relative justify-center items-center">
+    <section className="bg-white w-full h-screen grid relative justify-center items-center">
       <div className="self-start size-max absolute right-0 mt-3 mr-3">
         <TableHelpInfo />
       </div>

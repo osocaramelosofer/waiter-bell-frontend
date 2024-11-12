@@ -23,23 +23,23 @@ export function MenuItem() {
         style={{
           borderRadius: '4px'
         }}
-        className="border border-gray-200/60 bg-white"
+        className="border border-gray-200/60 dark:border-none bg-zinc-100 dark:bg-zinc-700 w-max"
       >
-        <div className="flex items-center space-x-3 p-3">
+        <div className="flex flex-col items-center p-3  ">
           <DialogImage
-            src="https://m.media-amazon.com/images/I/71skAxiMC2L._AC_UF1000,1000_QL80_.jpg"
+            src="/images/pizza.webp"
             alt="What I Talk About When I Talk About Running - book cover"
-            className="h-8 w-8 object-cover object-top"
+            className="h-24 w-24 object-cover object-top"
             style={{
               borderRadius: '4px'
             }}
           />
           <div className="flex flex-col items-start justify-center space-y-0">
-            <DialogTitle className="text-[10px] font-medium text-black sm:text-xs">
-              What I Talk About When I Talk About Running
+            <DialogTitle className="text-[10px] font-medium text-foreground sm:text-xs uppercase">
+              pizza
             </DialogTitle>
-            <DialogSubtitle className="text-[10px] text-gray-600 sm:text-xs">
-              Haruki Murakami
+            <DialogSubtitle className="text-[10px] text-gray-600 dark:text-gray-300 sm:text-xs flex flex-wrap max-w-[180px]">
+              carne | peperoni | jamon | queso de cabra | espinaca
             </DialogSubtitle>
           </div>
         </div>
@@ -49,53 +49,28 @@ export function MenuItem() {
           style={{
             borderRadius: '12px'
           }}
-          className="relative h-auto w-[500px] border border-gray-100 bg-white"
+          className="relative h-auto w-[500px] border border-gray-300 bg-foreground-800"
         >
           <ScrollArea className="h-[90vh]" type="scroll">
             <div className="relative p-6">
               <div className="flex justify-center py-10">
                 <DialogImage
-                  src="https://m.media-amazon.com/images/I/71skAxiMC2L._AC_UF1000,1000_QL80_.jpg"
+                  src="/images/pizza.webp"
                   alt="What I Talk About When I Talk About Running - book cover"
-                  className="h-auto w-[200px]"
+                  className="h-auto w-[400px]"
                 />
               </div>
               <div className="">
-                <DialogTitle className="text-black">
-                  What I Talk About When I Talk About Running
+                <DialogTitle className="font-bold text-foreground-100 uppercase">
+                  Pizza
                 </DialogTitle>
-                <DialogSubtitle className="font-light text-gray-400">
-                  Haruki Murakami
+                <DialogSubtitle className="font-light text-foreground-300">
+                  carne | peperoni | jamon | queso de cabra | espinaca
                 </DialogSubtitle>
-                <div className="mt-4 text-sm text-gray-700">
+                <div className="mt-4 text-sm text-foreground-300">
                   <p>
-                    In 1982, having sold his jazz bar to devote himself to
-                    writing, Murakami began running to keep fit. A year later,
-                    he’d completed a solo course from Athens to Marathon, and
-                    now, after dozens of such races, not to mention triathlons
-                    and a dozen critically acclaimed books, he reflects upon the
-                    influence the sport has had on his life and—even more
-                    important—on his writing.
-                  </p>
-                  <p>
-                    Equal parts training log, travelogue, and reminiscence, this
-                    revealing memoir covers his four-month preparation for the
-                    2005 New York City Marathon and takes us to places ranging
-                    from Tokyo’s Jingu Gaien gardens, where he once shared the
-                    course with an Olympian, to the Charles River in Boston
-                    among young women who outpace him. Through this marvelous
-                    lens of sport emerges a panorama of memories and insights:
-                    the eureka moment when he decided to become a writer, his
-                    greatest triumphs and disappointments, his passion for
-                    vintage LPs, and the experience, after fifty, of seeing his
-                    race times improve and then fall back.
-                  </p>
-                  <p>
-                    By turns funny and sobering, playful and philosophical, What
-                    I Talk About When I Talk About Running is rich and
-                    revelatory, both for fans of this masterful yet guardedly
-                    private writer and for the exploding population of athletes
-                    who find similar satisfaction in running.
+                    Deliciosa pizza hecha en horno, con ingredientes de alta
+                    calidad, ideal para compartirla con amigos y familia
                   </p>
                 </div>
               </div>
