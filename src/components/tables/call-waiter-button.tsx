@@ -20,7 +20,7 @@ export function CallWaiterButton({ tableId }: Props) {
     socket = io(
       `ws://${process.env.NEXT_PUBLIC_BACKEND_URL || 'localhost:3000'}`
     ) // Asegúrate de que esta URL sea correcta.
-    console.log('enviroment:', process.env.NEXT_PUBLIC_BACKEND_URL)
+    console.log('enviroment ??? :', process.env.NEXT_PUBLIC_BACKEND_URL)
 
     return () => {
       socket.disconnect()
