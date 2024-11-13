@@ -17,11 +17,7 @@ let socket: any
 export function CallWaiterButton({ tableId }: Props) {
   // Conectar al servidor solo una vez
   useEffect(() => {
-    socket = io('ws://localhost:3000') // Asegúrate de que esta URL sea correcta.
-
-    // socket.on('connect', () => {
-    //   console.log('Connected to server')
-    // })
+    socket = io(`ws://${process.env.BACKEND_URL || 'localhost:3000'}`) // Asegúrate de que esta URL sea correcta.
 
     return () => {
       socket.disconnect()
