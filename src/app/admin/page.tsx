@@ -60,7 +60,7 @@ export default function AdminPage() {
   useEffect(() => {
     // Inicializa el socket solo una vez
     socket = io(`ws://${process.env.BACKEND_URL || 'localhost:3000'}`)
-
+    console.log('enviroment:', process.env.BACKEND_URL)
     // Listener para 'user arrived'
     socket.on('user arrived', (msg: string) => {
       console.log('user arrived: ', msg)
