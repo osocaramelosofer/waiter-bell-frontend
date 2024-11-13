@@ -59,7 +59,11 @@ export default function AdminPage() {
   const [tablesState, setTablesState] = useState<Table[]>(tables)
   useEffect(() => {
     // Inicializa el socket solo una vez
-    socket = io(`ws://${process.env.BACKEND_URL || 'localhost:3000'}`)
+    socket = io(
+      `ws://${process.env.NEXT_PUBLIC_BACKEND_URL || 'localhost:3000'}`
+    )
+    console.log('enviroment:', process.env.NEXT_PUBLIC_BACKEND_URL)
+
     // Listener para 'user arrived'
     socket.on('user arrived', (msg: string) => {
       console.log('user arrived: ', msg)
