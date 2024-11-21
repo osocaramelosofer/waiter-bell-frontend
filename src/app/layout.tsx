@@ -4,7 +4,6 @@ import './globals.css'
 import { Rubik_Mono_One, Pirata_One } from 'next/font/google'
 import { Toaster } from 'sonner'
 import Providers from './Providers'
-import Head from 'next/head'
 
 const rubik = Rubik_Mono_One({
   subsets: ['latin'],
@@ -42,12 +41,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`dark ${rubik.variable} ${pirata.variable}`}>
-      <Head>
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="upgrade-insecure-requests"
-        />
-      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

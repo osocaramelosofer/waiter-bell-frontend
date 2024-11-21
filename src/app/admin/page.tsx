@@ -105,7 +105,7 @@ export default function AdminPage() {
             return (
               <div
                 key={tableId}
-                className="bg-red-500 rounded-full p-10 relative flex size-32 justify-center items-center"
+                className="bg-foreground-700 rounded-full p-10 relative flex size-32 justify-center items-center"
               >
                 <div className="absolute right-0 top-0">
                   <span
@@ -116,11 +116,20 @@ export default function AdminPage() {
                   </span>
                 </div>
 
-                <div className="bg-yellow-300 rounded-full p-8">
-                  <span className="bg-yellow-100 rounded-full font-bold text-black size-10 grid place-content-center">
-                    {tableId}
-                  </span>
-                </div>
+                <button
+                  className="bg-foreground-600 rounded-full font-bold text-black size-10 grid place-content-center"
+                  onClick={() => {
+                    setTablesState((prevState) => {
+                      return prevState.map((table) =>
+                        table.tableId === tableId
+                          ? { ...table, needService: false }
+                          : table
+                      )
+                    })
+                  }}
+                >
+                  {tableId}
+                </button>
               </div>
             )
           })}

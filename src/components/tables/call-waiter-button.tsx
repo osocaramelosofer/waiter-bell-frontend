@@ -18,7 +18,7 @@ export function CallWaiterButton({ tableId }: Props) {
   // Conectar al servidor solo una vez
   useEffect(() => {
     socket = io(
-      `ws://${process.env.NEXT_PUBLIC_BACKEND_URL || 'localhost:3000'}`
+      `ws://${process.env.NEXT_PUBLIC_BACKEND_URL || 'holbox-backend.us-east-2.elasticbeanstalk.com'}`
     ) // Asegúrate de que esta URL sea correcta.
     console.log('enviroment ??? :', process.env.NEXT_PUBLIC_BACKEND_URL)
 
