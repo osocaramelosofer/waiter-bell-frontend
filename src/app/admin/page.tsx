@@ -60,7 +60,7 @@ export default function AdminPage() {
   useEffect(() => {
     // Inicializa el socket solo una vez
     socket = io(
-      `ws://${process.env.NEXT_PUBLIC_BACKEND_URL || 'localhost:3000'}`
+      `ws://${process.env.NEXT_PUBLIC_BACKEND_URL || 'www.patioholbox.com/'}`
     )
     console.log('enviroment:', process.env.NEXT_PUBLIC_BACKEND_URL)
 
