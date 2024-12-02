@@ -17,9 +17,13 @@ let socket: any
 export function CallWaiterButton({ tableId }: Props) {
   // Conectar al servidor solo una vez
   useEffect(() => {
-    socket = io(
-      `ws://${process.env.NEXT_PUBLIC_BACKEND_URL || 'www.patioholbox.com/'}`
-    ) // Asegúrate de que esta URL sea correcta.
+    // Selecciona el protocolo correcto según el entorno
+    const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws'
+    const backendUrl =
+      process.env.NEXT_PUBLIC_BACKEND_URL || 'www.patioholbox.com'
+
+    socket = io(`${protocol}://${backendUrl}`)
+
     console.log('enviroment ??? :', process.env.NEXT_PUBLIC_BACKEND_URL)
 
     return () => {

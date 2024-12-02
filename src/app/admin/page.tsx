@@ -59,9 +59,12 @@ export default function AdminPage() {
   const [tablesState, setTablesState] = useState<Table[]>(tables)
   useEffect(() => {
     // Inicializa el socket solo una vez
-    socket = io(
-      `ws://${process.env.NEXT_PUBLIC_BACKEND_URL || 'www.patioholbox.com/'}`
-    )
+    // Selecciona el protocolo correcto según el entorno
+    const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws'
+    const backendUrl =
+      process.env.NEXT_PUBLIC_BACKEND_URL || 'www.patioholbox.com'
+
+    socket = io(`${protocol}://${backendUrl}`)
     console.log('enviroment:', process.env.NEXT_PUBLIC_BACKEND_URL)
 
     // Listener para 'user arrived'
